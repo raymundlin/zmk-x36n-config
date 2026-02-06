@@ -19,5 +19,10 @@
 #
 ---
 include:
+<<<<<<< HEAD
    - board: nrfmicro_13
      shield: x36n
+=======
+  - board: bdn9_rev2
+
+>>>>>>> 4188b79 (fix layout issue)
