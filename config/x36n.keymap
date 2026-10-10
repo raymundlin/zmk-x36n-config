@@ -30,7 +30,7 @@
             bindings = <
 &kp ESC   &kp Q  &kp W  &kp E      &kp R        &kp T             &kp Y             &kp U      &kp I         &kp O    &kp P     &kp BSPC
 &kp CAPS  &kp A  &kp S  &kp D      &kp F        &kp G             &kp H             &kp J      &kp K         &kp L    &kp SEMI  &kp MINUS
-&to 2     &kp Z  &kp X  &kp C      &kp V        &kp B             &kp N             &kp M      &lt 3 COMMA   &kp DOT  &kp LEFT  &kp RIGHT
+&to 5     &kp Z  &kp X  &kp C      &kp V        &kp B             &kp N             &kp M      &lt 3 COMMA   &kp DOT  &kp LEFT  &kp RIGHT
 &none     &none  &none  &kp RCTRL  &lt 1 ENTER  &kp LEFT_COMMAND  &mt LSHIFT SPACE  &lt 2 TAB  &kp LEFT_ALT  &none    &none     &none
             >;
         };
@@ -39,7 +39,7 @@
             bindings = <
 &kp INS         &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F10            &kp LS(LG(V))  &kp PAGE_UP     &kp UP_ARROW  &msc SCRL_DOWN   &kp F11   &kp DELETE
 &kp LG(LA(N8))  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp LC(LG(SPACE))  &kp HOME       &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp F12   &kp EQUAL
-&to 0           &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp TILDE          &kp END        &kp PAGE_DOWN   &kp ENTER     &msc SCRL_UP     &kp DOWN  &kp UP_ARROW
+&trans          &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp TILDE          &kp END        &kp PAGE_DOWN   &kp ENTER     &msc SCRL_UP     &kp DOWN  &kp UP_ARROW
 &none           &none            &none   &trans  &trans  &trans             &trans         &trans          &trans        &none            &none     &none
             >;
         };
@@ -48,14 +48,14 @@
             bindings = <
 &out OUT_TOG  &kp PERIOD    &kp N7  &kp N8  &kp N9  &kp N0           &kp BACKSLASH  &kp PIPE           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp C_VOLUME_UP    &kp LS(LG(LC(N4)))
 &kp GRAVE     &kp KP_PLUS   &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp SQT        &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp C_VOLUME_DOWN  &kp LS(LG(N5))
-&to 1         &kp KP_MINUS  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &kp SLASH      &kp QUESTION       &kp LEFT_BRACE        &kp RIGHT_BRACE        &msc SCRL_LEFT     &msc SCRL_RIGHT
+&trans        &kp KP_MINUS  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &kp SLASH      &kp QUESTION       &kp LEFT_BRACE        &kp RIGHT_BRACE        &msc SCRL_LEFT     &msc SCRL_RIGHT
 &none         &none         &none   &trans  &trans  &trans           &kp K_MUTE     &trans             &trans                &none                  &none              &none
             >;
         };
 
         fn3_layer {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4     &none            &none           &none  &none  &none  &none  &bootloader
+&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4     &none            &none           &none  &none  &none  &none  &none
 &bt BT_CLR      &none           &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MCLK        &msc SCRL_UP    &none  &none  &none  &none  &none
 &bt BT_CLR_ALL  &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &msc SCRL_DOWN  &none  &none  &none  &none  &none
 &none           &none           &none           &none           &none            &none            &none           &mo 4  &none  &none  &none  &none
@@ -73,10 +73,10 @@
 
         fn5_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&trans  &kp PERIOD  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &kp KP_EQUAL           &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp PLUS    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS   &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&to 0   &kp MINUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &kp RIGHT_PARENTHESIS  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+&none   &none       &none         &trans        &none         &trans           &trans                 &none   &trans  &none   &none    &none
             >;
         };
 
