@@ -28,10 +28,10 @@
 
         default_layer {
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp E         &kp R        &kp T             &kp Y      &kp U      &kp I           &kp O    &kp P     &kp BSPC
-&kp CAPS          &kp A  &kp S  &kp D         &kp F        &kp G             &kp H      &kp J      &kp K           &kp L    &kp SEMI  &kp MINUS
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V        &kp B             &kp N      &kp M      &lt 3 COMMA     &kp DOT  &kp LEFT  &kp RIGHT
-&none             &none  &none  &kp LEFT_ALT  &lt 1 ENTER  &kp LEFT_COMMAND  &kp SPACE  &lt 2 TAB  &kp LEFT_SHIFT  &none    &none     &none
+&kp ESC   &kp Q  &kp W  &kp E      &kp R        &kp T             &kp Y             &kp U      &kp I         &kp O    &kp P     &kp BSPC
+&kp CAPS  &kp A  &kp S  &kp D      &kp F        &kp G             &kp H             &kp J      &kp K         &kp L    &kp SEMI  &kp MINUS
+&to 2     &kp Z  &kp X  &kp C      &kp V        &kp B             &kp N             &kp M      &lt 3 COMMA   &kp DOT  &kp LEFT  &kp RIGHT
+&none     &none  &none  &kp RCTRL  &lt 1 ENTER  &kp LEFT_COMMAND  &mt LSHIFT SPACE  &lt 2 TAB  &kp LEFT_ALT  &none    &none     &none
             >;
         };
 
@@ -39,26 +39,26 @@
             bindings = <
 &kp INS         &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F10            &kp LS(LG(V))  &kp PAGE_UP     &kp UP_ARROW  &msc SCRL_DOWN   &kp F11   &kp DELETE
 &kp LG(LA(N8))  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp LC(LG(SPACE))  &kp HOME       &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp F12   &kp EQUAL
-&trans          &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp TILDE          &kp END        &kp PAGE_DOWN   &kp ENTER     &msc SCRL_UP     &kp DOWN  &kp UP_ARROW
+&to 0           &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp TILDE          &kp END        &kp PAGE_DOWN   &kp ENTER     &msc SCRL_UP     &kp DOWN  &kp UP_ARROW
 &none           &none            &none   &trans  &trans  &trans             &trans         &trans          &trans        &none            &none     &none
             >;
         };
 
         fn2_layer {
             bindings = <
-&out OUT_BLE  &kp LA(N1)  &kp N7  &kp N8  &kp N9  &kp N0     &kp BACKSLASH  &kp PIPE           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp C_VOLUME_UP    &kp LS(LG(LC(N4)))
-&bt BT_SEL 0  &kp LA(N2)  &kp N4  &kp N5  &kp N6  &kp AT     &kp SQT        &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp C_VOLUME_DOWN  &kp LS(LG(N5))
-&out OUT_USB  &kp LA(N3)  &kp N1  &kp N2  &kp N3  &kp GRAVE  &kp SLASH      &kp QUESTION       &kp LEFT_BRACE        &kp RIGHT_BRACE        &msc SCRL_LEFT     &msc SCRL_RIGHT
-&none         &none       &none   &trans  &trans  &trans     &kp K_MUTE     &trans             &trans                &none                  &none              &none
+&out OUT_TOG  &kp PERIOD    &kp N7  &kp N8  &kp N9  &kp N0           &kp BACKSLASH  &kp PIPE           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp C_VOLUME_UP    &kp LS(LG(LC(N4)))
+&kp GRAVE     &kp KP_PLUS   &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp SQT        &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp C_VOLUME_DOWN  &kp LS(LG(N5))
+&to 1         &kp KP_MINUS  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &kp SLASH      &kp QUESTION       &kp LEFT_BRACE        &kp RIGHT_BRACE        &msc SCRL_LEFT     &msc SCRL_RIGHT
+&none         &none         &none   &trans  &trans  &trans           &kp K_MUTE     &trans             &trans                &none                  &none              &none
             >;
         };
 
         fn3_layer {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &none            &none  &none  &none  &none  &none  &bootloader
-&bt BT_CLR      &none         &none         &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none  &none  &none  &none  &none  &none
-&bt BT_CLR_ALL  &none         &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none  &none  &none  &none  &none
-&none           &none         &none         &none           &none           &none            &none  &mo 4  &none  &none  &none  &none
+&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4     &none            &none           &none  &none  &none  &none  &bootloader
+&bt BT_CLR      &none           &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MCLK        &msc SCRL_UP    &none  &none  &none  &none  &none
+&bt BT_CLR_ALL  &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &msc SCRL_DOWN  &none  &none  &none  &none  &none
+&none           &none           &none           &none           &none            &none            &none           &mo 4  &none  &none  &none  &none
             >;
         };
 
